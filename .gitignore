@@ -1,0 +1,55 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.pickle
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# =========================
+# OS / Editor junk
+# =========================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+
+# =========================
+# Task07 outputs
+# =========================
+# Generated analysis outputs
+outputs/*.txt
+outputs/*.csv
+outputs/logs/*
+
+# Figures (can regenerate with visuals.py)
+report/figures/*.png
+report/figures/*.jpg
+report/figures/*.svg
+
+# =========================
+# Audio / Large artifacts (from Task 06)
+# =========================
+*.wav
+*.mp3
+
+# =========================
+# Misc
+# =========================
+# Archive files
+*.zip
+*.tar
+*.tar.gz
