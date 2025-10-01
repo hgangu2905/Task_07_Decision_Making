@@ -1,0 +1,32 @@
+column,index,value
+math score,17,18.0
+math score,59,0.0
+math score,145,22.0
+math score,338,24.0
+math score,466,26.0
+math score,787,19.0
+math score,842,23.0
+math score,980,8.0
+reading score,59,17.0
+reading score,76,26.0
+reading score,211,28.0
+reading score,327,23.0
+reading score,596,24.0
+reading score,980,24.0
+writing score,59,10.0
+writing score,76,22.0
+writing score,327,19.0
+writing score,596,15.0
+writing score,980,23.0
+total_score,17,78.0
+total_score,59,27.0
+total_score,76,78.0
+total_score,327,70.0
+total_score,596,69.0
+total_score,980,55.0
+average_score,17,26.0
+average_score,59,9.0
+average_score,76,26.0
+average_score,327,23.333333333333332
+average_score,596,23.0
+average_score,980,18.333333333333332

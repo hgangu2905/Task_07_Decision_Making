@@ -1,0 +1,133 @@
+===== SENSITIVITY / ROBUSTNESS ANALYSIS =====
+
+Scenarios compared:
+- baseline: Full dataset; cutoffs = Failing<150, Excellent≥210 (n=1000)
+- remove_top_5pct: Removed top 5% total_score (n=950)
+- remove_bottom_5pct: Removed bottom 5% total_score (n=950)
+- excellent_220: Threshold shift: Excellent≥220 (stricter) (n=1000)
+- excellent_200: Threshold shift: Excellent≥200 (lenient) (n=1000)
+
+--- Scenario: baseline ---
+Description: Full dataset; cutoffs = Failing<150, Excellent≥210
+Rows: 1000, Cutoffs: Failing<150, Excellent≥210
+Means -> math:66.09  reading:69.17  writing:68.05  total:203.31
+Overall category rates:
+  Excellent: 45.9% (Δ vs baseline +0.000)
+  Average:   43.8% (Δ vs baseline +0.000)
+  Failing:   10.3% (Δ vs baseline +0.000)
+Fairness (Disparate Impact min across subgroups):
+  Gender DI min: 0.766 (flag if < 0.80)
+  Race   DI min: 0.452 (flag if < 0.80)
+
+  By gender (rate_excellent, rate_average, rate_failing):
+    female      Exc:0.517  Avg:0.407  Fail:0.075
+    male        Exc:0.396  Avg:0.471  Fail:0.133
+
+  By race/ethnicity (rate_excellent, rate_average, rate_failing):
+    group A     Exc:0.281  Avg:0.539  Fail:0.180
+    group B     Exc:0.384  Avg:0.474  Fail:0.142
+    group C     Exc:0.445  Avg:0.455  Fail:0.100
+    group D     Exc:0.504  Avg:0.424  Fail:0.073
+    group E     Exc:0.621  Avg:0.314  Fail:0.064
+
+
+--- Scenario: remove_top_5pct ---
+Description: Removed top 5% total_score
+Rows: 950, Cutoffs: Failing<150, Excellent≥210
+Means -> math:64.69  reading:67.77  writing:66.62  total:199.08
+Overall category rates:
+  Excellent: 43.1% (Δ vs baseline -0.028)
+  Average:   46.1% (Δ vs baseline +0.023)
+  Failing:   10.8% (Δ vs baseline +0.005)
+Fairness (Disparate Impact min across subgroups):
+  Gender DI min: 0.786 (flag if < 0.80)
+  Race   DI min: 0.426 (flag if < 0.80)
+
+  By gender (rate_excellent, rate_average, rate_failing):
+    female      Exc:0.481  Avg:0.438  Fail:0.081
+    male        Exc:0.378  Avg:0.485  Fail:0.137
+
+  By race/ethnicity (rate_excellent, rate_average, rate_failing):
+    group A     Exc:0.247  Avg:0.565  Fail:0.188
+    group B     Exc:0.361  Avg:0.492  Fail:0.148
+    group C     Exc:0.422  Avg:0.474  Fail:0.105
+    group D     Exc:0.480  Avg:0.444  Fail:0.076
+    group E     Exc:0.579  Avg:0.349  Fail:0.071
+
+
+--- Scenario: remove_bottom_5pct ---
+Description: Removed bottom 5% total_score
+Rows: 950, Cutoffs: Failing<150, Excellent≥210
+Means -> math:67.72  reading:70.80  writing:69.75  total:208.27
+Overall category rates:
+  Excellent: 48.3% (Δ vs baseline +0.024)
+  Average:   46.1% (Δ vs baseline +0.023)
+  Failing:   5.6% (Δ vs baseline -0.047)
+Fairness (Disparate Impact min across subgroups):
+  Gender DI min: 0.766 (flag if < 0.80)
+  Race   DI min: 0.460 (flag if < 0.80)
+
+  By gender (rate_excellent, rate_average, rate_failing):
+    female      Exc:0.545  Avg:0.429  Fail:0.026
+    male        Exc:0.417  Avg:0.496  Fail:0.087
+
+  By race/ethnicity (rate_excellent, rate_average, rate_failing):
+    group A     Exc:0.301  Avg:0.578  Fail:0.120
+    group B     Exc:0.412  Avg:0.508  Fail:0.079
+    group C     Exc:0.469  Avg:0.479  Fail:0.053
+    group D     Exc:0.520  Avg:0.437  Fail:0.043
+    group E     Exc:0.654  Avg:0.331  Fail:0.015
+
+
+--- Scenario: excellent_220 ---
+Description: Threshold shift: Excellent≥220 (stricter)
+Rows: 1000, Cutoffs: Failing<150, Excellent≥220
+Means -> math:66.09  reading:69.17  writing:68.05  total:203.31
+Overall category rates:
+  Excellent: 36.6% (Δ vs baseline -0.093)
+  Average:   53.1% (Δ vs baseline +0.093)
+  Failing:   10.3% (Δ vs baseline +0.000)
+Fairness (Disparate Impact min across subgroups):
+  Gender DI min: 0.755 (flag if < 0.80)
+  Race   DI min: 0.487 (flag if < 0.80)
+
+  By gender (rate_excellent, rate_average, rate_failing):
+    female      Exc:0.415  Avg:0.510  Fail:0.075
+    male        Exc:0.313  Avg:0.554  Fail:0.133
+
+  By race/ethnicity (rate_excellent, rate_average, rate_failing):
+    group A     Exc:0.247  Avg:0.573  Fail:0.180
+    group B     Exc:0.326  Avg:0.532  Fail:0.142
+    group C     Exc:0.335  Avg:0.564  Fail:0.100
+    group D     Exc:0.397  Avg:0.531  Fail:0.073
+    group E     Exc:0.507  Avg:0.429  Fail:0.064
+
+
+--- Scenario: excellent_200 ---
+Description: Threshold shift: Excellent≥200 (lenient)
+Rows: 1000, Cutoffs: Failing<150, Excellent≥200
+Means -> math:66.09  reading:69.17  writing:68.05  total:203.31
+Overall category rates:
+  Excellent: 55.6% (Δ vs baseline +0.097)
+  Average:   34.1% (Δ vs baseline -0.097)
+  Failing:   10.3% (Δ vs baseline +0.000)
+Fairness (Disparate Impact min across subgroups):
+  Gender DI min: 0.810 (flag if < 0.80)
+  Race   DI min: 0.546 (flag if < 0.80)
+
+  By gender (rate_excellent, rate_average, rate_failing):
+    female      Exc:0.612  Avg:0.313  Fail:0.075
+    male        Exc:0.496  Avg:0.371  Fail:0.133
+
+  By race/ethnicity (rate_excellent, rate_average, rate_failing):
+    group A     Exc:0.382  Avg:0.438  Fail:0.180
+    group B     Exc:0.458  Avg:0.400  Fail:0.142
+    group C     Exc:0.558  Avg:0.342  Fail:0.100
+    group D     Exc:0.607  Avg:0.321  Fail:0.073
+    group E     Exc:0.700  Avg:0.236  Fail:0.064
+
+
+===== INTERPRETATION HINTS =====
+- If conclusions remain stable across scenarios, recommendations are robust.
+- If Excellent rate or fairness DI swings a lot under small changes, flag as medium/high-risk.
+- Use the CSV summary for tables in the stakeholder report.

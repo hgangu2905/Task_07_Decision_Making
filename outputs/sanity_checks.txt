@@ -1,0 +1,93 @@
+===== SHAPE & DTYPES =====
+Rows: 1000, Columns: 10
+gender                          object
+race/ethnicity                  object
+parental level of education     object
+lunch                           object
+test preparation course         object
+math score                       int64
+reading score                    int64
+writing score                    int64
+total_score                      int64
+average_score                  float64
+
+===== MISSINGNESS =====
+                             missing_count  missing_pct
+gender                                   0          0.0
+race/ethnicity                           0          0.0
+parental level of education              0          0.0
+lunch                                    0          0.0
+test preparation course                  0          0.0
+math score                               0          0.0
+reading score                            0          0.0
+writing score                            0          0.0
+total_score                              0          0.0
+average_score                            0          0.0
+
+===== DUPLICATES =====
+Duplicate rows: 0
+
+===== SCORE RANGE VALIDATION (0-100) =====
+math score: below 0 = 0, above 100 = 0
+reading score: below 0 = 0, above 100 = 0
+writing score: below 0 = 0, above 100 = 0
+
+===== DESCRIPTIVE SUMMARY (SCORES) =====
+       math score  reading score  writing score  total_score  average_score
+count  1000.00000    1000.000000    1000.000000  1000.000000    1000.000000
+mean     66.08900      69.169000      68.054000   203.312000      67.770667
+std      15.16308      14.600192      15.195657    42.771978      14.257326
+min       0.00000      17.000000      10.000000    27.000000       9.000000
+25%      57.00000      59.000000      57.750000   175.000000      58.333333
+50%      66.00000      70.000000      69.000000   205.000000      68.333333
+75%      77.00000      79.000000      79.000000   233.000000      77.666667
+max     100.00000     100.000000     100.000000   300.000000     100.000000
+
+===== CORRELATIONS (SCORES) =====
+               math score  reading score  writing score  total_score  average_score
+math score          1.000          0.818          0.803        0.919          0.919
+reading score       0.818          1.000          0.955        0.970          0.970
+writing score       0.803          0.955          1.000        0.966          0.966
+total_score         0.919          0.970          0.966        1.000          1.000
+average_score       0.919          0.970          0.966        1.000          1.000
+
+===== OUTLIERS VIA IQR =====
+math score: outliers = 8, bounds = (27.00, 107.00)
+reading score: outliers = 6, bounds = (29.00, 109.00)
+writing score: outliers = 5, bounds = (25.88, 110.88)
+total_score: outliers = 6, bounds = (88.00, 320.00)
+average_score: outliers = 6, bounds = (29.33, 106.67)
+
+===== CATEGORICAL VALUE COUNTS =====
+
+-- gender --
+gender
+female    518
+male      482
+
+-- race/ethnicity --
+race/ethnicity
+group C    319
+group D    262
+group B    190
+group E    140
+group A     89
+
+-- parental level of education --
+parental level of education
+some college          226
+associate's degree    222
+high school           196
+some high school      179
+bachelor's degree     118
+master's degree        59
+
+-- lunch --
+lunch
+standard        645
+free/reduced    355
+
+-- test preparation course --
+test preparation course
+none         642
+completed    358

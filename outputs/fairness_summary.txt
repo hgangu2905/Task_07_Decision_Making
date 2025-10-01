@@ -1,0 +1,13 @@
+===== FAIRNESS SUMMARY =====
+Rows analyzed: 1000
+
+Top gender by Excellent rate: female (0.517)
+Top race/ethnicity by Excellent rate: group E (0.621)
+
+Cohen's d (total_score, female vs male): 0.264 (positive means female > male)
+
+Subgroups with disparate impact < 0.80 (vs. best Excellent-rate subgroup):
+- gender = male: 0.766
+- race/ethnicity = group A: 0.452
+- race/ethnicity = group B: 0.618
+- race/ethnicity = group C: 0.716

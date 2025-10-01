@@ -1,0 +1,98 @@
+===== Basic Dataset Info =====
+Number of records: 1000
+Columns: ['gender', 'race/ethnicity', 'parental level of education', 'lunch', 'test preparation course', 'math score', 'reading score', 'writing score', 'total_score', 'average_score']
+
+Unique values per column:
+ gender                           2
+race/ethnicity                   5
+parental level of education      6
+lunch                            2
+test preparation course          2
+math score                      81
+reading score                   72
+writing score                   77
+total_score                    194
+average_score                  194
+dtype: int64
+
+===== Descriptive Stats for Individual Scores =====
+       math score  reading score  writing score
+count  1000.00000    1000.000000    1000.000000
+mean     66.08900      69.169000      68.054000
+std      15.16308      14.600192      15.195657
+min       0.00000      17.000000      10.000000
+25%      57.00000      59.000000      57.750000
+50%      66.00000      70.000000      69.000000
+75%      77.00000      79.000000      79.000000
+max     100.00000     100.000000     100.000000
+
+===== Correlation Between Scores =====
+               math score  reading score  writing score
+math score       1.000000       0.817580       0.802642
+reading score    0.817580       1.000000       0.954598
+writing score    0.802642       0.954598       1.000000
+
+===== Top 5 Students by Total Score =====
+     gender race/ethnicity  total_score
+916    male        group E          300
+962  female        group E          300
+458  female        group E          300
+114  female        group E          299
+712  female        group D          297
+
+===== Bottom 5 Students by Total Score =====
+     gender race/ethnicity  total_score
+59   female        group C           27
+980  female        group B           55
+596    male        group B           69
+327    male        group A           70
+17   female        group B           78
+
+===== Best and Worst Subject for Each Student (Sample 5) =====
+   math score  reading score  ...   best_subject  worst_subject
+0          72             72  ...  writing score     math score
+1          69             90  ...  reading score     math score
+2          90             95  ...  reading score     math score
+3          47             57  ...  reading score  writing score
+4          76             78  ...  reading score  writing score
+
+[5 rows x 5 columns]
+
+===== Score Categories =====
+performance_category
+Excellent    459
+Average      438
+Failing      103
+Name: count, dtype: int64
+
+===== Average Total Score by Gender =====
+gender
+female    208.708494
+male      197.512448
+Name: total_score, dtype: float64
+
+===== Average Total Score by Parental Education =====
+parental level of education
+master's degree       220.796610
+bachelor's degree     215.771186
+associate's degree    208.707207
+some college          205.429204
+some high school      195.324022
+high school           189.290816
+Name: total_score, dtype: float64
+
+===== Average Total Score by Test Prep Course =====
+test preparation course
+completed    218.008380
+none         195.116822
+Name: total_score, dtype: float64
+
+===== Underperforming Students (total_score < 150) =====
+    gender  ... total_score
+3     male  ...         148
+7     male  ...         122
+9   female  ...         148
+11    male  ...         135
+17  female  ...          78
+
+[5 rows x 4 columns]

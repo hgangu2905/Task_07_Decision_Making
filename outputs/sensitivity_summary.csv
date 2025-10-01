@@ -1,0 +1,6 @@
+scenario,description,n,failing_cutoff,excellent_cutoff,mean_math,mean_reading,mean_writing,mean_total,rate_overall_excellent,rate_overall_average,rate_overall_failing,min_DI_gender,min_DI_race
+baseline,"Full dataset; cutoffs = Failing<150, Excellent≥210",1000,150,210,66.089,69.169,68.054,203.312,0.459,0.438,0.103,0.7659,0.452
+remove_top_5pct,Removed top 5% total_score,950,150,210,64.687,67.768,66.62,199.076,0.4305,0.4611,0.1084,0.7858,0.4264
+remove_bottom_5pct,Removed bottom 5% total_score,950,150,210,67.724,70.799,69.749,208.273,0.4832,0.4611,0.0558,0.7656,0.4605
+excellent_220,Threshold shift: Excellent≥220 (stricter),1000,150,220,66.089,69.169,68.054,203.312,0.366,0.531,0.103,0.7548,0.4874
+excellent_200,Threshold shift: Excellent≥200 (lenient),1000,150,200,66.089,69.169,68.054,203.312,0.556,0.341,0.103,0.8103,0.5457

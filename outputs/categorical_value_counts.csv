@@ -1,0 +1,18 @@
+column,value,count
+gender,female,518
+gender,male,482
+race/ethnicity,group C,319
+race/ethnicity,group D,262
+race/ethnicity,group B,190
+race/ethnicity,group E,140
+race/ethnicity,group A,89
+parental level of education,some college,226
+parental level of education,associate's degree,222
+parental level of education,high school,196
+parental level of education,some high school,179
+parental level of education,bachelor's degree,118
+parental level of education,master's degree,59
+lunch,standard,645
+lunch,free/reduced,355
+test preparation course,none,642
+test preparation course,completed,358
